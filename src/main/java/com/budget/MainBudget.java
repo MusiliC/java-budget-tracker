@@ -8,7 +8,7 @@ public class MainBudget {
         
         UserInterfaceImp app = new UserInterfaceImp();
         ItemInterfaceImp itemApp = new ItemInterfaceImp();
-        itemApp.addItem();
+        System.out.println(itemApp.getItems());
     }
 
 

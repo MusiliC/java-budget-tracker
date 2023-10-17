@@ -13,3 +13,8 @@ CREATE TABLE IF NOT EXISTS user (
     ->     userId INT,
     ->     FOREIGN KEY (userId) REFERENCES user(userId)
     -> );
+
+
+SELECT i.itemId, i.itemName,i.itemQuantity, i.itemPrice,  u.userId FROM item i JOIN user u 
+ON i.userId = u.userId;
+

@@ -2,7 +2,9 @@ package com.budget;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
@@ -10,6 +12,7 @@ public class ItemInterfaceImp implements ItemInterface {
 
     Scanner scanner = new Scanner(System.in);
     private Connection connection = DatabaseConnection.getConnection();
+    List<Item> itemsArray = new ArrayList<>();
 
     @Override
     public void addItem() {
@@ -41,8 +44,34 @@ public class ItemInterfaceImp implements ItemInterface {
 
     @Override
     public List<Item> getItems() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'getItems'");
+        try {
+
+            ResultSet items = checkItemsInDB();
+            // System.out.println("Item Name\t" + "Quantity\t" + "Unit Price\t" + "Total
+            // Value ");
+            System.out.println();
+
+            // result set returns retrieved items from db
+            while (items.next()) {
+                int itemId = items.getInt("itemId");
+                String itemName = items.getString("itemName");
+                int itemQuantity = items.getInt("itemQuantity");
+                double itemPrice = items.getDouble("itemPrice");
+                int userId = items.getInt("userId");
+
+                Item item = new Item(itemId, itemName, itemQuantity, itemPrice, userId);
+
+                itemsArray.add(item);
+
+            }
+            return itemsArray;
+
+        } catch (SQLException e) {
+            System.out.println("Error when fetching items " + e.getMessage());
+            e.printStackTrace();
+        }
+        return itemsArray;
+
     }
 
     private static Item getItem(Scanner scanner) {
@@ -51,7 +80,7 @@ public class ItemInterfaceImp implements ItemInterface {
         System.out.print("Enter item name: ");
         String item_name = scanner.nextLine().trim();
 
-         System.out.print("Enter item quantity: ");
+        System.out.print("Enter item quantity: ");
         int item_quantity = scanner.nextInt();
         scanner.nextLine();
 
@@ -59,12 +88,27 @@ public class ItemInterfaceImp implements ItemInterface {
         double item_price = scanner.nextDouble();
         scanner.nextLine();
 
-       
         System.out.println();
 
-        Item new_item = new Item(item_name,  item_quantity,item_price, 1);
+        Item new_item = new Item(item_name, item_quantity, item_price, 1);
 
         return new_item;
+    }
+
+    private ResultSet checkItemsInDB() {
+        String selectUserItems = "SELECT i.itemId, i.itemName,i.itemQuantity, i.itemPrice,  u.userId FROM item i JOIN user u ON i.userId = u.userId;";
+
+        PreparedStatement preparedStatement;
+
+        try {
+            preparedStatement = connection.prepareStatement(selectUserItems);
+            ResultSet items = preparedStatement.executeQuery();
+            return items;
+        } catch (SQLException e) {
+            System.out.println("Error When fetching items from database");
+            e.printStackTrace();
+        }
+        return null;
     }
 
 }
