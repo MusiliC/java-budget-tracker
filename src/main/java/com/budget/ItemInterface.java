@@ -2,7 +2,7 @@ package com.budget;
 
 import java.util.List;
 
-public interface BudgetInterface {
-    void addItem(Item item);
+public interface ItemInterface {
+    void addItem();
     List<Item>  getItems();
 }

@@ -9,6 +9,7 @@ CREATE TABLE IF NOT EXISTS user (
     ->     itemId INT AUTO_INCREMENT PRIMARY KEY,
     ->     itemName VARCHAR(255) NOT NULL,
     ->     itemPrice DOUBLE NOT NULL,
+    ->     itemQuantity INT NOT NULL,
     ->     userId INT,
     ->     FOREIGN KEY (userId) REFERENCES user(userId)
     -> );
