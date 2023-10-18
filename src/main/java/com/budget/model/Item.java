@@ -1,4 +1,4 @@
-package com.budget;
+package com.budget.model;
 
 public class Item {
     private int itemId;

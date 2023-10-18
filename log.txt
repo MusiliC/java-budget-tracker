@@ -1,0 +1,31 @@
+2023-10-18 09:55:16 | initializeLogger | INFO | Starting application..
+2023-10-18 12:17:15 | initializeLogger | INFO | Starting application..
+2023-10-18 12:17:15 | startApplication | INFO | In the budget tracker implementation
+2023-10-18 13:33:58 | initializeLogger | INFO | Starting application..
+2023-10-18 13:33:59 | startApplication | INFO | In the budget tracker implementation
+2023-10-18 13:33:59 | authenticateUser | INFO | Authenticate the user
+2023-10-18 13:35:10 | startApplication | INFO | User authenticated: true
+2023-10-18 13:54:06 | initializeLogger | INFO | Starting application..
+2023-10-18 13:54:06 | startApplication | INFO | In the budget tracker implementation
+2023-10-18 13:54:06 | authenticateUser | INFO | Authenticate the user
+2023-10-18 13:54:22 | startApplication | INFO | User authenticated: true
+2023-10-18 13:54:33 | initializeLogger | INFO | Starting application..
+2023-10-18 13:54:33 | startApplication | INFO | In the budget tracker implementation
+2023-10-18 13:54:33 | authenticateUser | INFO | Authenticate the user
+2023-10-18 13:54:44 | startApplication | INFO | User authenticated: false
+2023-10-18 14:10:11 | initializeLogger | INFO | Starting application..
+2023-10-18 14:10:11 | startApplication | INFO | In the budget tracker implementation
+2023-10-18 14:10:11 | authenticateUser | INFO | Authenticate the user
+2023-10-18 14:10:21 | startApplication | INFO | User authenticated: false
+2023-10-18 14:13:59 | initializeLogger | INFO | Starting application..
+2023-10-18 14:13:59 | startApplication | INFO | In the budget tracker implementation
+2023-10-18 14:13:59 | authenticateUser | INFO | Authenticate the user
+2023-10-18 14:14:06 | startApplication | INFO | User authenticated: false
+2023-10-18 14:20:40 | initializeLogger | INFO | Starting application..
+2023-10-18 14:20:40 | startApplication | INFO | In the budget tracker implementation
+2023-10-18 14:20:40 | authenticateUser | INFO | Authenticate the user
+2023-10-18 14:20:50 | startApplication | INFO | User authenticated: false
+2023-10-18 14:26:34 | initializeLogger | INFO | Starting application..
+2023-10-18 14:26:34 | startApplication | INFO | In the budget tracker implementation
+2023-10-18 14:26:34 | authenticateUser | INFO | Authenticate the user
+2023-10-18 14:26:44 | startApplication | INFO | User authenticated: true
