@@ -76,26 +76,26 @@
 
 //     }
 
-//     private static Item getItem(Scanner scanner) {
-//         System.out.println();
-//         // reading user input
-//         System.out.print("Enter item name: ");
-//         String item_name = scanner.nextLine().trim();
+    // private static Item getItem(Scanner scanner) {
+    //     System.out.println();
+    //     // reading user input
+    //     System.out.print("Enter item name: ");
+    //     String item_name = scanner.nextLine().trim();
 
-//         System.out.print("Enter item quantity: ");
-//         int item_quantity = scanner.nextInt();
-//         scanner.nextLine();
+    //     System.out.print("Enter item quantity: ");
+    //     int item_quantity = scanner.nextInt();
+    //     scanner.nextLine();
 
-//         System.out.print("Enter item price: ");
-//         double item_price = scanner.nextDouble();
-//         scanner.nextLine();
+    //     System.out.print("Enter item price: ");
+    //     double item_price = scanner.nextDouble();
+    //     scanner.nextLine();
 
-//         System.out.println();
+    //     System.out.println();
 
-//         Item new_item = new Item(item_name, item_quantity, item_price, 1);
+    //     Item new_item = new Item(item_name, item_quantity, item_price, 1);
 
-//         return new_item;
-//     }
+    //     return new_item;
+    // }
 
 //     private ResultSet checkItemsInDB() {
 //         String selectUserItems = "SELECT i.itemId, i.itemName,i.itemQuantity, i.itemPrice,  u.userId FROM item i JOIN user u ON i.userId = u.userId;";

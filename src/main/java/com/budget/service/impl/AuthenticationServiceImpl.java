@@ -26,11 +26,14 @@ public class AuthenticationServiceImpl implements AuthenticationService {
         preparedStatement.setString(2, password);
 
         ResultSet resultSet = preparedStatement.executeQuery();
-
+        boolean isAuthenticated = false;
         while (resultSet.next()) {
-            return true;
+            isAuthenticated = true;
         }
-        return false;
+        resultSet.close();
+       
+        connection.close();
+        return isAuthenticated;
     }
 
 }
